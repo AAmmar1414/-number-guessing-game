@@ -1,16 +1,18 @@
+#!/usr/bin/env node
+
 import inquirer from "inquirer";
 
 type anstype = {
     guessuser:number
 }
-const sysgenno=Math.floor(Math.random()*100);
+const sysgenno=Math.floor(Math.random()*10);
 
 
 const answers = await inquirer.prompt([
     {
         type:"number",
         name:"guessuser",
-        message:"Guess user a number :",
+        message:"Guess user a number BETWEEN 0-10 :",
 
     }
 ])
